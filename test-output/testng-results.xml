@@ -2,48 +2,48 @@
 <testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35467" started-at="2021-10-24T07:37:18Z" finished-at="2021-10-24T07:37:54Z">
+  <suite name="Goibibo_booking" duration-ms="33752" started-at="2021-10-24T09:44:06Z" finished-at="2021-10-24T09:44:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35467" started-at="2021-10-24T07:37:18Z" finished-at="2021-10-24T07:37:54Z">
+    <test name="GetTickePrice" duration-ms="33752" started-at="2021-10-24T09:44:06Z" finished-at="2021-10-24T09:44:39Z">
       <class name="tst.Runner">
-        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:tst.Runner@685cb137]" name="setUpDriver" is-config="true" duration-ms="13385" started-at="2021-10-24T07:37:18Z" finished-at="2021-10-24T07:37:32Z">
+        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:tst.Runner@685cb137]" name="setUpDriver" is-config="true" duration-ms="13566" started-at="2021-10-24T09:44:06Z" finished-at="2021-10-24T09:44:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:tst.Runner@685cb137]" name="launchApplication" duration-ms="8409" started-at="2021-10-24T07:37:32Z" finished-at="2021-10-24T07:37:40Z">
+        <test-method status="PASS" signature="launchApplication()[pri:0, instance:tst.Runner@685cb137]" name="launchApplication" duration-ms="7428" started-at="2021-10-24T09:44:19Z" finished-at="2021-10-24T09:44:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="enterSourceLocation()[pri:0, instance:tst.Runner@685cb137]" name="enterSourceLocation" duration-ms="3861" started-at="2021-10-24T07:37:40Z" description="Feed Source Location Data" depends-on-methods="tst.Runner.launchApplication" finished-at="2021-10-24T07:37:44Z">
+        <test-method status="PASS" signature="enterSourceLocation()[pri:0, instance:tst.Runner@685cb137]" name="enterSourceLocation" duration-ms="1768" started-at="2021-10-24T09:44:27Z" description="Feed Source Location Data" depends-on-methods="tst.Runner.launchApplication" finished-at="2021-10-24T09:44:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterSourceLocation -->
-        <test-method status="PASS" signature="enterDestLocation()[pri:0, instance:tst.Runner@685cb137]" name="enterDestLocation" duration-ms="1716" started-at="2021-10-24T07:37:44Z" description="Feed Destination Location Data" depends-on-methods="tst.Runner.enterSourceLocation" finished-at="2021-10-24T07:37:46Z">
+        <test-method status="PASS" signature="enterDestLocation()[pri:0, instance:tst.Runner@685cb137]" name="enterDestLocation" duration-ms="1642" started-at="2021-10-24T09:44:28Z" description="Feed Destination Location Data" depends-on-methods="tst.Runner.enterSourceLocation" finished-at="2021-10-24T09:44:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterDestLocation -->
-        <test-method status="PASS" signature="clickDate()[pri:0, instance:tst.Runner@685cb137]" name="clickDate" duration-ms="570" started-at="2021-10-24T07:37:46Z" description="Click first day of next month" depends-on-methods="tst.Runner.enterDestLocation" finished-at="2021-10-24T07:37:46Z">
+        <test-method status="PASS" signature="clickDate()[pri:0, instance:tst.Runner@685cb137]" name="clickDate" duration-ms="528" started-at="2021-10-24T09:44:30Z" description="Click first day of next month" depends-on-methods="tst.Runner.enterDestLocation" finished-at="2021-10-24T09:44:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickDate -->
-        <test-method status="PASS" signature="clickSearchButton()[pri:0, instance:tst.Runner@685cb137]" name="clickSearchButton" duration-ms="4215" started-at="2021-10-24T07:37:46Z" description="Searching for Flights" depends-on-methods="tst.Runner.clickDate" finished-at="2021-10-24T07:37:51Z">
+        <test-method status="PASS" signature="clickSearchButton()[pri:0, instance:tst.Runner@685cb137]" name="clickSearchButton" duration-ms="5792" started-at="2021-10-24T09:44:31Z" description="Searching for Flights" depends-on-methods="tst.Runner.clickDate" finished-at="2021-10-24T09:44:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickSearchButton -->
-        <test-method status="PASS" signature="bookTicket()[pri:0, instance:tst.Runner@685cb137]" name="bookTicket" duration-ms="343" started-at="2021-10-24T07:37:51Z" description="Booking ticket" depends-on-methods="tst.Runner.clickSearchButton" finished-at="2021-10-24T07:37:51Z">
+        <test-method status="PASS" signature="bookTicket()[pri:0, instance:tst.Runner@685cb137]" name="bookTicket" duration-ms="325" started-at="2021-10-24T09:44:36Z" description="Booking ticket" depends-on-methods="tst.Runner.clickSearchButton" finished-at="2021-10-24T09:44:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookTicket -->
-        <test-method status="PASS" signature="displayTicketPrice()[pri:0, instance:tst.Runner@685cb137]" name="displayTicketPrice" duration-ms="672" started-at="2021-10-24T07:37:51Z" description="Displaying Approx ticket price for next month" depends-on-methods="tst.Runner.bookTicket" finished-at="2021-10-24T07:37:52Z">
+        <test-method status="PASS" signature="displayTicketPrice()[pri:0, instance:tst.Runner@685cb137]" name="displayTicketPrice" duration-ms="405" started-at="2021-10-24T09:44:37Z" description="Displaying Approx ticket price for next month" depends-on-methods="tst.Runner.bookTicket" finished-at="2021-10-24T09:44:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- displayTicketPrice -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tst.Runner@685cb137]" name="tearDown" is-config="true" duration-ms="2218" started-at="2021-10-24T07:37:52Z" finished-at="2021-10-24T07:37:54Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tst.Runner@685cb137]" name="tearDown" is-config="true" duration-ms="2206" started-at="2021-10-24T09:44:37Z" finished-at="2021-10-24T09:44:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tst.Runner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- GetTickePrice -->
+  </suite> <!-- Goibibo_booking -->
 </testng-results>

@@ -88,6 +88,8 @@ public class Runner extends Elements {
 	@Test(dependsOnMethods="clickSearchButton",description="Booking ticket")
 	public void bookTicket()
 	{
+
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		clickP(driver.findElement(bookBtn));
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}
