@@ -200,6 +200,7 @@ public class Runner extends Elements {
 	public void sendKeysP(WebElement e,Keys k){
 
 		try{
+			
 			delay(1);
 			wait.until(ExpectedConditions.elementToBeClickable(e));
 			e.sendKeys(k);
