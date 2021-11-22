@@ -4,26 +4,24 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
 
-import org.testng.reporters.jq.Main;
-
 public class PropertyFileReader {
-	private static Properties prop;
+	private static Properties properties;
 	private static InputStream input;
 
 	public PropertyFileReader() {
 		try {
-			prop = new Properties();
+			properties = new Properties();
 			input = new FileInputStream(".\\Config.properties");
-			prop.load(input);
+			properties.load(input);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 
 	}
 
-	public static String getConfigval(String key) {
+	public String getConfigval(String key) {
 		try {
-			return prop.getProperty(key);
+			return properties.getProperty(key);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			return null;
