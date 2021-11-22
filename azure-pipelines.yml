@@ -19,7 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '**/*.html'
-    goals: 'clean install mvn test -Dtest=”Runner”'
+    goals: 'clean install test -Dtest=”Runner”'
 - task: CopyFiles@2
   inputs:
    SourceFolder: "$(System.DefaultWorkingDirectory)"

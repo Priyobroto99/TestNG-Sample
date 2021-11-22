@@ -51,7 +51,7 @@ public class Runner extends Elements {
 		String pattern = "dd-MM-yyyy";
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 		String date = simpleDateFormat.format(new Date());
-		reports = new ExtentReports(".\\TestReports\\Report_"+date+".html", true);
+		reports = new ExtentReports(".\\Report_"+date+".html", true);
 		propReader = new PropertyFileReader();
 		i = Integer.parseInt(propReader.getConfigval("waittime"));
 		er  = new ExcelReader(".\\TestDataSet\\testdatafile.xlsx",0);
