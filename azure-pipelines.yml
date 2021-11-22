@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'vs2017-win2016'
 
 steps:
 - task: Maven@3
@@ -17,6 +17,14 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    publishJUnitResults: false
+    testResultsFiles: '**/*.html'
+    goals: 'clean install mvn test -Dtest=”Runner”'
+- task: CopyFiles@2
+  inputs:
+   SourceFolder: "$(System.DefaultWorkingDirectory)"
+   Contents: '**/*.html'
+   TargetFolder: "$(Build.ArtifactStagingDirectory)"
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: "$(Build.ArtifactStagingDirectory)"
