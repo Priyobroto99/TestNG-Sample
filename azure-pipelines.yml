@@ -19,7 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '**/*.html'
-    goals: 'clean installcompile test -DfailIfNoTests=false -Dtest=”Runner”'
+    goals: 'clean install compile test -DfailIfNoTests=false -Dtest=”Runner”'
 - task: CopyFiles@2
   inputs:
    SourceFolder: "$(System.DefaultWorkingDirectory)"
