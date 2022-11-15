@@ -1,9 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Goibibo_booking">
-
-	<test name="GetTickePrice">
+	<test name="Parallel test" parallel="methods">
 		<classes>
-			<class name="tst.Runner"></class>
+			<class name="tst.RunnerParallel" ></class>
 		</classes>
 	</test>
 </suite>

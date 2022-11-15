@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Goibibo_booking]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Parallel test(failed)">
+    <classes>
+      <class name="tst.RunClass">
+        <methods>
+          <include name="method1"/>
+        </methods>
+      </class> <!-- tst.RunClass -->
+    </classes>
+  </test> <!-- Parallel test(failed) -->
+</suite> <!-- Failed suite [Goibibo_booking] -->

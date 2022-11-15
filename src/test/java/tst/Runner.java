@@ -1,14 +1,12 @@
 package tst;
 import java.io.File;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -16,23 +14,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
 import com.google.common.base.Verify;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import com.relevantcodes.extentreports.converters.ReportParser;
 
 import Enums.DriverOptions;
-import configReader.PropertyFileReader;
 import driver.DriverSupplier;
 import element.Elements;
 import excel.ExcelReader;
+import util.PropertyFileReader;
 
 
 public class Runner extends Elements {
@@ -44,14 +40,17 @@ public class Runner extends Elements {
 	ExtentReports reports = null;
 	ExtentTest test = null;
 	int i;
-
+	String reportP;
+	
+	
 	@BeforeClass
 	public void setUp() throws Exception
 	{
 		String pattern = "dd-MM-yyyy";
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 		String date = simpleDateFormat.format(new Date());
-		reports = new ExtentReports(".\\Report_"+date+".html", true);
+		reportP = ".\\Report_"+date+".html";
+		reports = new ExtentReports(reportP, true);
 		propReader = new PropertyFileReader();
 		i = Integer.parseInt(propReader.getConfigval("waittime"));
 		er  = new ExcelReader(".\\TestDataSet\\testdatafile.xlsx",0);

@@ -1,4 +1,4 @@
-package configReader;
+package util;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -19,7 +19,7 @@ public class PropertyFileReader {
 
 	}
 
-	public static String getConfigval(String key) {
+	public String getConfigval(String key) {
 		try {
 			return prop.getProperty(key);
 		} catch (Exception ex) {

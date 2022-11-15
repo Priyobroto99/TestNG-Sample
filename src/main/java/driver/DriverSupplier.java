@@ -14,7 +14,7 @@ public class DriverSupplier {
 		if(driver==null){
 			System.setProperty("webdriver.chrome.driver",".\\Drivers\\chromedriver.exe");
 			ChromeOptions co = new ChromeOptions();
-			//co.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+			co.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
 			driver= new ChromeDriver(co);
 			driver.manage().window().maximize();
 
